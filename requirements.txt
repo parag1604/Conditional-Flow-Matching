@@ -1,3 +1,7 @@
-torch
-torchvision
-tqdm
+torch>=2.1
+torchvision>=0.16
+numpy
+matplotlib
+scikit-learn
+scipy
+Pillow
