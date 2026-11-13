@@ -6,7 +6,7 @@ Flow matching from scratch: first on 2-D toy data, then generating 64x64 CelebA 
 
 ## Theory
 
-Lecture notes for this topic are coming soon on https://parag1604.github.io/notes
+Please note that the theory corresponding to the codes is hosted on this [page](https://parag1604.github.io/notes/Machine-Learning/Flow-Matching) (Flow Matching: conditional flow matching, rectified flow, minibatch-OT couplings, and the link to diffusion).
 
 In short: a continuous normalizing flow transports a simple distribution to the data with an ODE $dx/dt = v_\theta(x, t)$. Flow matching trains $v_\theta$ by plain regression, without simulating the ODE during training. Take a noise sample $x_0 \sim \mathcal{N}(0, I)$ and a data sample $x_1$, join them by the straight line $x_t = (1 - t)\,x_0 + t\,x_1$, and regress the velocity of that line:
 
